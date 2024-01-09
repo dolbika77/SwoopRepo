@@ -1,3 +1,5 @@
+import DataObject.LoginData;
+import DataObject.RegistrationData;
 import StepObject.FoodStep;
 import StepObject.LoginStep;
 import StepObject.RegistrationStep;
@@ -21,13 +23,13 @@ import static DataObject.SearchData.minPriceValue;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-public class MainTest {
+public class MainTest implements LoginData {
 
 
     @Test(priority = 1)
     @Description ("აღნიშნული ტესტი ახორციელებს სისტემაში დალოგინებას მცდარი მონაცემებით")
     @Severity(SeverityLevel.MINOR)
-    public void loginWithRandomData(){
+    public void loginWithRandomData (){
         LoginStep step=new LoginStep();
 
 //        შესვლა ღილაკზე დაკლიკება
